@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
        
         highScore = userDefaults.integer(forKey: "myKey")
+        highScoreLabel.text = "High Score: " + String(highScore)
         
         
     }
