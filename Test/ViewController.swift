@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var highScoreLabel: UILabel!
+    
     var myInt = 0
     var highScore = 0
     let formatter = NumberFormatter()
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
-        highScore = userDefaults.integer(forKey: "myKey")
+        highScore = userDefaults.integer(forKey: "highScore")
         highScoreLabel.text = "High Score: " + String(highScore)
         
         
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
         myInt = myInt + 1
         if myInt > highScore {
             highScore = myInt
-            userDefaults.set(highScore, forKey: "myKey")
+            userDefaults.set(highScore, forKey: "highScore")
         }
         myLabel.text = String(myInt)
         highScoreLabel.text = "High Score: " + String(highScore)
