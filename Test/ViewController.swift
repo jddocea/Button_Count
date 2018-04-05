@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
     //MARK: Properties
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
 
     //MARK: Actions
     @IBAction func myAction(_ sender: UIButton) {
-        
+        AudioServicesPlaySystemSound(1519)
         myInt = myInt + 1
         if myInt > highScore {
             highScore = myInt
